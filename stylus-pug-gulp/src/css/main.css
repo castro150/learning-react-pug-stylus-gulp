@@ -1,0 +1,92 @@
+main,
+.div-test {
+  color: #fff;
+}
+a {
+  color: #000;
+}
+a:hover,
+input:focus {
+  color: #f00;
+}
+.red {
+  color: #f00;
+}
+.foo[title*='&'] {
+  font-size: 3em;
+}
+.body-test {
+  color: #000;
+  font-size: 14px;
+}
+.div-test {
+  width: 150px;
+  height: 120px;
+  margin-left: -75px;
+  margin-top: -60px;
+}
+.div-test {
+  width: 150px;
+  height: 120px;
+  margin-left: -75px;
+  margin-top: -60px;
+}
+img {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.div-test asd {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+img {
+  -webkit-border-radius: 10px/12px 10px;
+  -moz-border-radius: 10px/12px 10px;
+  border-radius: 10px/12px 10px;
+}
+.div-test {
+  -webkit-border-radius: 10px 10px/12px 20px 5px;
+  -moz-border-radius: 10px 10px/12px 20px 5px;
+  border-radius: 10px 10px/12px 20px 5px;
+}
+.button-send {
+  background: #fc0;
+  color: #fff;
+}
+.button-send:hover {
+  color: #f00;
+  background: #e2e2e2;
+}
+.wrapper {
+  width: 615px;
+}
+.wrapper2 {
+  width: 615px;
+}
+.wrapper3 {
+  width: 120px;
+}
+.wrapper4 {
+  width: 40px;
+}
+.wrapper4 {
+  width: 10px;
+}
+.wrapper5 {
+  width: 3px;
+}
+.wrapper6 {
+  width: 10px;
+}
+.body-test {
+  padding: 30px;
+  margin: 3px;
+}
+.body-test {
+  color: rgba(255,200,100,0.5);
+  color: rgba(255,200,100,0.5);
+  color: rgba(255,200,100,0.5);
+  color: rgba(255,200,100,0.5);
+}

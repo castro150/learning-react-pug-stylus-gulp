@@ -1,0 +1,129 @@
+main, .div-test
+  color #fff
+
+a
+  color #000
+
+  &:hover
+  /input:focus
+    color: #f00
+
+.red
+  color red
+
+.foo[title*='\&']
+  font-size: 3em
+
+$color = #000
+$font-size = 14px
+.body-test
+  color $color
+  font-size $font-size
+
+.div-test
+  width: w = 150px
+  height: h = 120px
+  margin-left: -(w / 2)
+  margin-top: -(h / 2)
+
+.div-test
+  width 150px
+  height 120px
+  margin-left: -(@width / 2)
+  margin-top: -(@height / 2)
+
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+  
+img
+  border-radius(10px)
+
+.div-test
+    asd
+        border-radius: 10px
+
+// MIXINS
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+  
+img
+  border-radius 10px/12px 10px
+  
+.div-test
+    border-radius 10px 10px/12px 20px 5px
+
+
+primary-button()
+  background #fc0
+  color #fff
+  
+  &:hover
+    color #f00
+    background #e2e2e2
+  
+.button-send
+  primary-button()
+
+// FUNCOES
+add(a, b=a)
+  a + b
+
+.wrapper
+  width add(600px, 15)
+
+.wrapper2
+  width add(600px, 15px)
+
+.wrapper3
+  width add(60px)
+
+// unit coloca a unidade
+add(a, b=unit(a, px))
+  a + b
+
+.wrapper4
+  width add(20)
+
+subtract(a, b)
+  a - b
+
+.wrapper4
+  width subtract(b: 10px, a: 20px)
+
+subtract2(a = 5, b)
+  a - b
+
+.wrapper5
+  width subtract2(b: 2px)
+
+sizes()
+  return 15px 10px
+
+.wrapper6
+  width sizes()[1]
+
+add( a, b )
+  a + b
+
+sub( a, b )
+  a - b
+
+invoke( a, b, fn )
+  fn( a, b )
+
+.body-test
+  padding invoke( 10px, 20, add )
+  margin invoke( 8px, 5, sub )
+
+.body-test
+  color: rgba(255, 200, 100, 0.5);
+  color: rgba(red: 255, green: 200, blue: 100, alpha: 0.5);
+  color: rgba(alpha: 0.5, blue: 100, red: 255, 200);
+  color: rgba(alpha: 0.5, blue: 100, 255, 200);
+
+// INSPECT
+p(rgba)
