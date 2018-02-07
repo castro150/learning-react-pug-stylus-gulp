@@ -1,6 +1,6 @@
 import React from 'react';
 import { expect } from 'chai';
-import { spy } from 'sinon';
+import { spy, mock } from 'sinon';
 import { shallow, mount } from 'enzyme';
 import { BeerListContainer } from './components';
 import { InputArea, BeerList } from './components';
@@ -72,6 +72,16 @@ describe('InputArea', () => {
     addButton.simulate('click');
     expect(addItemSpy.calledOnce).to.equal(true);
     expect(addItemSpy.calledWith('Octoberfest')).to.equal(true);
+  });
+
+  it('should clear the input when Add is clicked', () => {
+    const wrapper = mount(<InputArea onSubmit={mock()}/>);
+    const input = wrapper.find('input');
+    const addButton = wrapper.find('button');
+    input.simulate('change', {target: { value: 'Resin' }});
+    addButton.simulate('click');
+    expect(wrapper.state('text')).to.equal('');
+    expect(input.prop('value')).to.equal('');
   });
 });
 

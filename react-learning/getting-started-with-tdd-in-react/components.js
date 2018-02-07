@@ -40,6 +40,7 @@ export class InputArea extends Component {
   }
 
   handleClick() {
+    this.setState({text: ''});
     this.props.onSubmit(this.state.text);
   }
 

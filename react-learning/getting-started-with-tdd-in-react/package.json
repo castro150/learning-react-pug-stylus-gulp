@@ -4,6 +4,7 @@
   "description": "Getting Started with TDD in React",
   "main": "index.js",
   "scripts": {
+    "start": "quik",
     "test": "mocha --require setup.js *.spec.js",
     "test:watch": "npm run test -- --watch"
   },
